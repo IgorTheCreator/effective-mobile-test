@@ -1,0 +1,42 @@
+{
+  "name": "store-history-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "migrate": "npx prisma migrate dev --name init",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:dev": "tsx watch src/index.ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Morozov Igor https://github.com/IgorTheCreator",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fastify/autoload": "^5.10.0",
+    "@fastify/cors": "^9.0.1",
+    "@fastify/swagger": "^8.15.0",
+    "@fastify/swagger-ui": "^4.1.0",
+    "@prisma/client": "^5.19.1",
+    "close-with-grace": "^2.1.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "fastify-plugin": "^4.5.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "@types/node": "^22.5.2",
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "pino-pretty": "^11.2.2",
+    "prettier": "3.3.3",
+    "prisma": "^5.19.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.3.0"
+  }
+}
